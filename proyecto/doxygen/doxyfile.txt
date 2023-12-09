@@ -1,0 +1,32 @@
+
+
+# Project information
+PROJECT_NAME           = "Bunglebuild"
+PROJECT_NUMBER         = 1.0
+PROJECT_BRIEF          = "Breve descripción del proyecto"
+PROJECT_LOGO           = logo.png
+
+# Output directory
+OUTPUT_DIRECTORY       = doc
+CREATE_SUBDIRS         = YES
+
+# Project source directory
+INPUT                  = app/ config/ public/ resources/ routes/ tests/ 
+
+# Exclude some files and directories from documentation
+EXCLUDE                = node_modules
+
+# If you're using PHP, set the following:
+OPTIMIZE_FOR_FORTRAN   = YES
+
+# PHP configuration
+EXTENSION_MAPPING      = php=PHP
+
+# Set the following to YES to generate HTML output
+GENERATE_HTML          = YES
+
+# The HTML output directory
+HTML_OUTPUT            = html
+
+# Set the following to YES to generate LaTeX output
+GENERATE_LATEX         = NO
