@@ -6,7 +6,7 @@
 
     <div class="container">
         <div class="row">
-          
+
             <div class="col-md-11 task-container">
                 <div class="container-fluid">
                     <div class="row justify-content-center p-1 mb-4">
@@ -89,8 +89,9 @@
                                         <td class="">
                                             <div class="d-flex  gap-4">
 
+
                                                 @if (!SessionManager::isAdmin() && SessionManager::getUserId() == $tarea['op_id'] && $tarea['estado'] == 'P')
-                                                    <a href="{{ route('finishForm',['id' => $tarea['task_id']]) }}">
+                                                    <a href="{{ route('finishForm', ['id' => $tarea['task_id']]) }}">
                                                         <button class="btn btn-warning col-md-12" id="finish"
                                                             name="finish" value="{{ $tarea['task_id'] }}"><i
                                                                 class="bi bi-pencil-square"></i></button>
@@ -102,7 +103,8 @@
                                                             <button class="btn btn-success col-md-12" name="accept"> <i
                                                                     class="bi bi-check"></i></button>
                                                         </a>
-                                                        <a href="{{ route('confirmDelete', ['id' => $tarea['task_id']]) }}">
+                                                        <a
+                                                            href="{{ route('confirmDelete', ['id' => $tarea['task_id']]) }}">
                                                             <button class="btn btn-danger col-md-12" id="delete"
                                                                 name="delete" value="{{ $tarea['task_id'] }}"> <i
                                                                     class="bi bi-x"></i></button>
@@ -134,11 +136,18 @@
             </div>
         </div>
     </div>
-<div class=" d-flex align-items-center justify-content-center">
+    <div class=" d-flex align-items-center justify-content-center">
         <div class="paginacion">
             {!! $numPags !!}
         </div>
     </div>
     </section>
+
     
+
+
+
+        
+    
+
 @endsection

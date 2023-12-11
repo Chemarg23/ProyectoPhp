@@ -177,8 +177,7 @@ function checkTaskDirectory($id)
  * @param string $directory - Directorio de destino.
  * @return string - Ruta del archivo subido.
  */
-function uploadFile($file, $id, $directory)
-{
+function uploadFile($file, $id, $directory){
 	$directorio = "files/task$id/$directory";
 	$path = public_path($directorio);
 	if (!is_dir($path)) {

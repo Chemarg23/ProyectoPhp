@@ -32,7 +32,7 @@
 
                                 <div class="mb-4">
                                     <label for="typeEmailX" class="form-label">Email</label>
-                                    <input type="text" id="typeEmailX" name="mail" value="{{ filter_input(INPUT_POST, 'mail') }}"
+                                    <input type="text" id="typeEmailX" name="mail" value="{{ isset($mail) ? $mail : filter_input(INPUT_POST, 'mail') }}"
                                         class="form-control form-control-lg" />
                                     @if (isset($errores['mail']))
                                         <div class="alert alert-danger mt-1">{{ $errores['mail'] }}</div>

@@ -59,9 +59,11 @@ class LogInController extends Controller
      *
      * @return \Illuminate\View\View|\Illuminate\Http\RedirectResponse Vista de inicio de sesión o redirección a /taskbox.
      */
-    public function showLogIn()
-    {
-       
+    public function showLogIn(){
+        
+        if (SessionManager::isLoggedIn()) {
+            return redirect("/taskbox");
+        }
         if (isset($_COOKIE['remember'])) {
             $id = openssl_decrypt($_COOKIE['remember'], "aes-256-cbc", $this->key, 0, $this->iv);
             $userData = $this->user->getUserById($id);
@@ -69,13 +71,13 @@ class LogInController extends Controller
                 SessionManager::startSession($userData['user_id'], "{$userData['nombre']} {$userData['apellido']}", $userData['rol']);
                 return redirect("/taskbox");
             }
+        }elseif(isset($_COOKIE['credential'])){
+            $mail = openssl_decrypt($_COOKIE['credential'], "aes-256-cbc", $this->key, 0, $this->iv);
         }
+        return view("login",['mail' => $mail]);
+        
 
-        if (SessionManager::isLoggedIn()) {
-            return redirect("/taskbox");
-        }
-
-        return view("login");
+        
     }
 
 
@@ -88,25 +90,22 @@ class LogInController extends Controller
      * @param \Illuminate\Http\Request $request Objeto de solicitud.
      * @return \Illuminate\View\View|\Illuminate\Http\RedirectResponse Vista de inicio de sesión o redirección a /taskbox.
      */
-    public function checkCredentials(Request $request)
-    {
-
+    public function checkCredentials(Request $request){
         validateCredentialInput($request, $this->gestor_errores);
-
         if ($this->gestor_errores->HayErrores()) {
             return view("login", ['errores' => $this->gestor_errores->getErrores()]);
         }
-
         if (!$this->user->checkCredentials($request, $this->gestor_errores)) {
             $this->gestor_errores->AnotaError('password', "Contraseña incorrecta");
             return view("login", ['errores' => $this->gestor_errores->getErrores()]);
         }
-
         $data = $this->user->getUserByMail($request->input('mail'));
         if ($request->has('remember')) {
             $user_id = openssl_encrypt($data['user_id'], "aes-256-cbc", $this->key, 0, $this->iv);
             setcookie('remember', $user_id, time() + 3600 * 24 * 365);
         }
+        $credential = openssl_encrypt($data['email'], "aes-256-cbc", $this->key, 0, $this->iv);
+        setcookie('credential', $credential, time() + 3600 * 24 * 365);
         SessionManager::startSession($data['user_id'], "{$data['nombre']} {$data['apellido']}", $data['rol']);
         return redirect('/taskbox');
     }
