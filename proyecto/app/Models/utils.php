@@ -143,13 +143,13 @@ function getOperators()
 function getProvincias()
 {
 	$db = TaskDatabase::getInstance();
-	$sql = 'SELECt cod, nombre FROM provincias';
+	$sql = 'SELECt id, nombre FROM tbl_provincias';
 	$rs = $db->customQuery($sql);
 
 	$provincias = array();
 	$provincias[""] = "Seleccione una provincia";
 	foreach ($rs as $reg) {
-		$provincias[$reg["cod"]] = $reg["nombre"];
+		$provincias[$reg["id"]] = $reg["nombre"];
 	}
 	$db->close();
 	return $provincias;

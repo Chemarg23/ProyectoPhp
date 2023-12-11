@@ -1,0 +1,255 @@
+\doxysection{Gestor\+Errores Class Reference}
+\hypertarget{class_gestor_errores}{}\label{class_gestor_errores}\index{GestorErrores@{GestorErrores}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gestor_errores_a659daee216488cc146119e91c5ba6ff5}{\+\_\+\+\_\+construct}} (\$format\+\_\+prefix=\textquotesingle{}\textquotesingle{}, \$format\+\_\+sufix=\textquotesingle{}\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_gestor_errores_a9f69504f2f05c1eb22a74bf2c716c0b2}{Anota\+Error}} (string \$campo, string \$descripcion)
+\item 
+\mbox{\hyperlink{class_gestor_errores_afd9129fe2444c1b081b533ba4745404b}{Hay\+Errores}} ()
+\item 
+\Hypertarget{class_gestor_errores_a7f06fdb17a7783bd5ff796ce70f820f0}\label{class_gestor_errores_a7f06fdb17a7783bd5ff796ce70f820f0} 
+{\bfseries get\+Errores} ()
+\item 
+\mbox{\hyperlink{class_gestor_errores_a66ec7cd0f027a04e14b0c9e9a9187ff5}{Hay\+Error}} (\$campo)
+\item 
+\mbox{\hyperlink{class_gestor_errores_aadc633f52065391d6fefb6b53074e02c}{Error}} (\$campo)
+\item 
+\mbox{\hyperlink{class_gestor_errores_a63062fc59cc3b5c9b7c11a7ea6557a57}{Error\+Formateado}} (\$campo)
+\item 
+\mbox{\hyperlink{class_gestor_errores_a79c67f6d3b23ab3d632a1ecf12d52429}{validate\+Mail}} (\$campo, \$mail)
+\item 
+\mbox{\hyperlink{class_gestor_errores_abab2bb8b434a2b2b3163e6a5be9d2ffa}{validate\+Nif}} (\$campo, \$nif)
+\item 
+\mbox{\hyperlink{class_gestor_errores_a85a02505ee73127ee9986ebe31899fb3}{validate\+Date}} (\$campo, \$date)
+\item 
+\mbox{\hyperlink{class_gestor_errores_a71594e5a685d286c906d90feff0401e7}{validate\+Postal\+Code}} (\$campo, \$valor, \$provincia)
+\item 
+\mbox{\hyperlink{class_gestor_errores_ae1de50caf78bd2dcff654c5838497e57}{validate\+Phone}} (\$campo, \$valor)
+\item 
+\mbox{\hyperlink{class_gestor_errores_aae95a7ed1479f8423e52e09370787bdf}{validate\+Img}} (\$valor)
+\item 
+\mbox{\hyperlink{class_gestor_errores_a6e1e46fcf8760ac0a6c724372a96d190}{validate\+Text\+Doc}} (\$valor)
+\item 
+\mbox{\hyperlink{class_gestor_errores_a08ca744af846531de86a9f240e36df73}{empty\+Input}} (\$campo, \$valor)
+\item 
+\mbox{\hyperlink{class_gestor_errores_ae2ec8c63761a254c6d0771af9260531d}{validate\+Rol}} (\$valor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que me permitirá llevar un registro de los errores que se producen 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_gestor_errores_a659daee216488cc146119e91c5ba6ff5}\label{class_gestor_errores_a659daee216488cc146119e91c5ba6ff5} 
+\index{GestorErrores@{GestorErrores}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$format\+\_\+prefix = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$format\+\_\+sufix = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Crea el gestor de errores y anota las etiquetas que se muestran antes y después en caso de queramos salida formateada 
+\begin{DoxyParams}[1]{Parameters}
+type & {\em \$format\+\_\+prefix} & \\
+\hline
+type & {\em \$format\+\_\+sufix} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_gestor_errores_a9f69504f2f05c1eb22a74bf2c716c0b2}\label{class_gestor_errores_a9f69504f2f05c1eb22a74bf2c716c0b2} 
+\index{GestorErrores@{GestorErrores}!AnotaError@{AnotaError}}
+\index{AnotaError@{AnotaError}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{AnotaError()}{AnotaError()}}
+{\footnotesize\ttfamily Anota\+Error (\begin{DoxyParamCaption}\item[{string}]{\$campo,  }\item[{string}]{\$descripcion }\end{DoxyParamCaption})}
+
+Anota un error para un campo en nuestro gestor de errores 
+\begin{DoxyParams}[1]{Parameters}
+type & {\em \$campo} & \\
+\hline
+type & {\em \$descripcion} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_gestor_errores_a08ca744af846531de86a9f240e36df73}\label{class_gestor_errores_a08ca744af846531de86a9f240e36df73} 
+\index{GestorErrores@{GestorErrores}!emptyInput@{emptyInput}}
+\index{emptyInput@{emptyInput}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{emptyInput()}{emptyInput()}}
+{\footnotesize\ttfamily empty\+Input (\begin{DoxyParamCaption}\item[{}]{\$campo,  }\item[{}]{\$valor }\end{DoxyParamCaption})}
+
+Verificar si un campo de entrada está vacío.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$campo} & Campo asociado al valor. \\
+\hline
+string & {\em \$valor} & Valor a verificar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_gestor_errores_aadc633f52065391d6fefb6b53074e02c}\label{class_gestor_errores_aadc633f52065391d6fefb6b53074e02c} 
+\index{GestorErrores@{GestorErrores}!Error@{Error}}
+\index{Error@{Error}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}}
+{\footnotesize\ttfamily Error (\begin{DoxyParamCaption}\item[{}]{\$campo }\end{DoxyParamCaption})}
+
+Devuelve la descripción de error para un campo o una cadaena vacia si no hay 
+\begin{DoxyParams}[1]{Parameters}
+type & {\em \$campo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\Hypertarget{class_gestor_errores_a63062fc59cc3b5c9b7c11a7ea6557a57}\label{class_gestor_errores_a63062fc59cc3b5c9b7c11a7ea6557a57} 
+\index{GestorErrores@{GestorErrores}!ErrorFormateado@{ErrorFormateado}}
+\index{ErrorFormateado@{ErrorFormateado}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{ErrorFormateado()}{ErrorFormateado()}}
+{\footnotesize\ttfamily Error\+Formateado (\begin{DoxyParamCaption}\item[{}]{\$campo }\end{DoxyParamCaption})}
+
+Devuelve la descripción del error o cadena vacia si no hay 
+\begin{DoxyParams}[1]{Parameters}
+type & {\em \$campo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\Hypertarget{class_gestor_errores_a66ec7cd0f027a04e14b0c9e9a9187ff5}\label{class_gestor_errores_a66ec7cd0f027a04e14b0c9e9a9187ff5} 
+\index{GestorErrores@{GestorErrores}!HayError@{HayError}}
+\index{HayError@{HayError}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{HayError()}{HayError()}}
+{\footnotesize\ttfamily Hay\+Error (\begin{DoxyParamCaption}\item[{}]{\$campo }\end{DoxyParamCaption})}
+
+Indica si hay error en un campo \begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\Hypertarget{class_gestor_errores_afd9129fe2444c1b081b533ba4745404b}\label{class_gestor_errores_afd9129fe2444c1b081b533ba4745404b} 
+\index{GestorErrores@{GestorErrores}!HayErrores@{HayErrores}}
+\index{HayErrores@{HayErrores}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{HayErrores()}{HayErrores()}}
+{\footnotesize\ttfamily Hay\+Errores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Indica si hay errores \begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\Hypertarget{class_gestor_errores_a85a02505ee73127ee9986ebe31899fb3}\label{class_gestor_errores_a85a02505ee73127ee9986ebe31899fb3} 
+\index{GestorErrores@{GestorErrores}!validateDate@{validateDate}}
+\index{validateDate@{validateDate}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{validateDate()}{validateDate()}}
+{\footnotesize\ttfamily validate\+Date (\begin{DoxyParamCaption}\item[{}]{\$campo,  }\item[{}]{\$date }\end{DoxyParamCaption})}
+
+Validar una fecha.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$campo} & Campo asociado a la fecha. \\
+\hline
+string & {\em \$date} & Fecha a validar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_gestor_errores_aae95a7ed1479f8423e52e09370787bdf}\label{class_gestor_errores_aae95a7ed1479f8423e52e09370787bdf} 
+\index{GestorErrores@{GestorErrores}!validateImg@{validateImg}}
+\index{validateImg@{validateImg}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{validateImg()}{validateImg()}}
+{\footnotesize\ttfamily validate\+Img (\begin{DoxyParamCaption}\item[{}]{\$valor }\end{DoxyParamCaption})}
+
+Validar un tipo de imagen permitido.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$valor} & Tipo de imagen a validar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_gestor_errores_a79c67f6d3b23ab3d632a1ecf12d52429}\label{class_gestor_errores_a79c67f6d3b23ab3d632a1ecf12d52429} 
+\index{GestorErrores@{GestorErrores}!validateMail@{validateMail}}
+\index{validateMail@{validateMail}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{validateMail()}{validateMail()}}
+{\footnotesize\ttfamily validate\+Mail (\begin{DoxyParamCaption}\item[{}]{\$campo,  }\item[{}]{\$mail }\end{DoxyParamCaption})}
+
+Validar un correo electrónico.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$campo} & Campo asociado al correo electrónico. \\
+\hline
+string & {\em \$mail} & Dirección de correo electrónico a validar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_gestor_errores_abab2bb8b434a2b2b3163e6a5be9d2ffa}\label{class_gestor_errores_abab2bb8b434a2b2b3163e6a5be9d2ffa} 
+\index{GestorErrores@{GestorErrores}!validateNif@{validateNif}}
+\index{validateNif@{validateNif}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{validateNif()}{validateNif()}}
+{\footnotesize\ttfamily validate\+Nif (\begin{DoxyParamCaption}\item[{}]{\$campo,  }\item[{}]{\$nif }\end{DoxyParamCaption})}
+
+Validar un NIF (Número de Identificación Fiscal).
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$campo} & Campo asociado al NIF. \\
+\hline
+string & {\em \$nif} & NIF a validar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_gestor_errores_ae1de50caf78bd2dcff654c5838497e57}\label{class_gestor_errores_ae1de50caf78bd2dcff654c5838497e57} 
+\index{GestorErrores@{GestorErrores}!validatePhone@{validatePhone}}
+\index{validatePhone@{validatePhone}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{validatePhone()}{validatePhone()}}
+{\footnotesize\ttfamily validate\+Phone (\begin{DoxyParamCaption}\item[{}]{\$campo,  }\item[{}]{\$valor }\end{DoxyParamCaption})}
+
+Validar un número de teléfono.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$campo} & Campo asociado al número de teléfono. \\
+\hline
+string & {\em \$valor} & Número de teléfono a validar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_gestor_errores_a71594e5a685d286c906d90feff0401e7}\label{class_gestor_errores_a71594e5a685d286c906d90feff0401e7} 
+\index{GestorErrores@{GestorErrores}!validatePostalCode@{validatePostalCode}}
+\index{validatePostalCode@{validatePostalCode}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{validatePostalCode()}{validatePostalCode()}}
+{\footnotesize\ttfamily validate\+Postal\+Code (\begin{DoxyParamCaption}\item[{}]{\$campo,  }\item[{}]{\$valor,  }\item[{}]{\$provincia }\end{DoxyParamCaption})}
+
+Validar un código postal.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$campo} & Campo asociado al código postal. \\
+\hline
+string & {\em \$valor} & Código postal a validar. \\
+\hline
+string & {\em \$provincia} & Provincia asociada al código postal. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_gestor_errores_ae2ec8c63761a254c6d0771af9260531d}\label{class_gestor_errores_ae2ec8c63761a254c6d0771af9260531d} 
+\index{GestorErrores@{GestorErrores}!validateRol@{validateRol}}
+\index{validateRol@{validateRol}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{validateRol()}{validateRol()}}
+{\footnotesize\ttfamily validate\+Rol (\begin{DoxyParamCaption}\item[{}]{\$valor }\end{DoxyParamCaption})}
+
+Validar un rol.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$valor} & Rol a validar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_gestor_errores_a6e1e46fcf8760ac0a6c724372a96d190}\label{class_gestor_errores_a6e1e46fcf8760ac0a6c724372a96d190} 
+\index{GestorErrores@{GestorErrores}!validateTextDoc@{validateTextDoc}}
+\index{validateTextDoc@{validateTextDoc}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{validateTextDoc()}{validateTextDoc()}}
+{\footnotesize\ttfamily validate\+Text\+Doc (\begin{DoxyParamCaption}\item[{}]{\$valor }\end{DoxyParamCaption})}
+
+Validar un tipo de documento de texto permitido.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$valor} & Tipo de documento de texto a validar. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp2/htdocs/proyecto/app/\+Models/Gestor\+Errores.\+php\end{DoxyCompactItemize}

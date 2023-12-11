@@ -1,0 +1,162 @@
+\doxysection{User\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_user_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_user_controller}\index{UserController@{UserController}}
+Inheritance diagram for User\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_user_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_user_controller_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_user_controller_afc46e0e60e91fe0dc975f6249731def6}{change\+Form}} (\$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_user_controller_a234e128735970534b59731443c8e78d7}{update\+User}} (Request \$request, \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_user_controller_a5ab96e9373eddde0535108da4f6e9529}{list\+Users}} (Request \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_user_controller_ac86cd0dd4d2bf1fce1c0fc39a7b26007}{add\+Form}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_user_controller_a0ea03fd1986131070698de9881275709}{add\+User}} (Request \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_user_controller_a0d0ada2abc5c71dfd60f18c5fc23c4ac}{confirm\+Deletion}} (\$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_user_controller_ae364a95f2ffa5b2b50434fdd7da1d9f8}{delete\+User}} (\$id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_user_controller_a6f5a316077e9179bcf9fd2016b849dd8}\label{class_app_1_1_http_1_1_controllers_1_1_user_controller_a6f5a316077e9179bcf9fd2016b849dd8} 
+{\bfseries \$gestor\+\_\+errores}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controlador para gestionar usuarios y perfiles. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_user_controller_a095c5d389db211932136b53f25f39685}\label{class_app_1_1_http_1_1_controllers_1_1_user_controller_a095c5d389db211932136b53f25f39685} 
+\index{UserController@{UserController}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor de la clase User\+Controller. Inicializa instancias del gestor de errores y del modelo de usuario. Verifica la autenticación del usuario. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_user_controller_ac86cd0dd4d2bf1fce1c0fc39a7b26007}\label{class_app_1_1_http_1_1_controllers_1_1_user_controller_ac86cd0dd4d2bf1fce1c0fc39a7b26007} 
+\index{UserController@{UserController}!addForm@{addForm}}
+\index{addForm@{addForm}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{addForm()}{addForm()}}
+{\footnotesize\ttfamily add\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Muestra el formulario para agregar un nuevo usuario.
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View Vista del formulario de nuevo usuario. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_user_controller_a0ea03fd1986131070698de9881275709}\label{class_app_1_1_http_1_1_controllers_1_1_user_controller_a0ea03fd1986131070698de9881275709} 
+\index{UserController@{UserController}!addUser@{addUser}}
+\index{addUser@{addUser}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily add\+User (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})}
+
+Agrega un nuevo usuario.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & Objeto de solicitud. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View\texorpdfstring{$\vert$}{|}\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Redirect\+Response Vista de nuevo usuario agregado o redirección a /taskbox. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_user_controller_afc46e0e60e91fe0dc975f6249731def6}\label{class_app_1_1_http_1_1_controllers_1_1_user_controller_afc46e0e60e91fe0dc975f6249731def6} 
+\index{UserController@{UserController}!changeForm@{changeForm}}
+\index{changeForm@{changeForm}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{changeForm()}{changeForm()}}
+{\footnotesize\ttfamily change\+Form (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Muestra el formulario para actualizar el perfil del usuario.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & Identificador del usuario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View Vista del formulario de perfil. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_user_controller_a0d0ada2abc5c71dfd60f18c5fc23c4ac}\label{class_app_1_1_http_1_1_controllers_1_1_user_controller_a0d0ada2abc5c71dfd60f18c5fc23c4ac} 
+\index{UserController@{UserController}!confirmDeletion@{confirmDeletion}}
+\index{confirmDeletion@{confirmDeletion}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{confirmDeletion()}{confirmDeletion()}}
+{\footnotesize\ttfamily confirm\+Deletion (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Muestra el formulario de confirmación para la eliminación de un usuario.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & Identificador del usuario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View Vista de confirmación de eliminación. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_user_controller_ae364a95f2ffa5b2b50434fdd7da1d9f8}\label{class_app_1_1_http_1_1_controllers_1_1_user_controller_ae364a95f2ffa5b2b50434fdd7da1d9f8} 
+\index{UserController@{UserController}!deleteUser@{deleteUser}}
+\index{deleteUser@{deleteUser}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{deleteUser()}{deleteUser()}}
+{\footnotesize\ttfamily delete\+User (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Elimina un usuario.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & Identificador del usuario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Redirect\+Response Redirección a la lista de usuarios. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_user_controller_a5ab96e9373eddde0535108da4f6e9529}\label{class_app_1_1_http_1_1_controllers_1_1_user_controller_a5ab96e9373eddde0535108da4f6e9529} 
+\index{UserController@{UserController}!listUsers@{listUsers}}
+\index{listUsers@{listUsers}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{listUsers()}{listUsers()}}
+{\footnotesize\ttfamily list\+Users (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})}
+
+Lista todos los usuarios con paginación.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & Objeto de solicitud. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View Vista de usuarios y paginación. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_user_controller_a234e128735970534b59731443c8e78d7}\label{class_app_1_1_http_1_1_controllers_1_1_user_controller_a234e128735970534b59731443c8e78d7} 
+\index{UserController@{UserController}!updateUser@{updateUser}}
+\index{updateUser@{updateUser}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{updateUser()}{updateUser()}}
+{\footnotesize\ttfamily update\+User (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Actualiza la información del perfil del usuario.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & Objeto de solicitud. \\
+\hline
+int & {\em \$id} & Identificador del usuario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View\texorpdfstring{$\vert$}{|}\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Redirect\+Response Vista de perfil actualizado o redirección a /taskbox. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp2/htdocs/proyecto/app/\+Http/\+Controllers/User\+Controller.\+php\end{DoxyCompactItemize}

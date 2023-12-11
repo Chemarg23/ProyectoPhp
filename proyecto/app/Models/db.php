@@ -24,7 +24,7 @@ class TaskDatabase
     {
         // Establecer la conexión a la base de datos.
         try {
-            $this->connection = new PDO("mysql:host=localhost;dbname=bungle_db", "root", "") or die();
+            $this->connection = new PDO("mysql:host=localhost;dbname=bunglebuild_database", "root", "") or die();
         } catch (PDOException $e) {
             die("Error de conexión: " . $e->getMessage());
         }

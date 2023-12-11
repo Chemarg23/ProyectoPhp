@@ -61,9 +61,9 @@ class LogInController extends Controller
      */
     public function showLogIn()
     {
-        $rememberCookie = $_COOKIE['remember'] ?? null;
-        if ($rememberCookie) {
-            $id = openssl_decrypt($rememberCookie, "aes-256-cbc", $this->key, 0, $this->iv);
+       
+        if (isset($_COOKIE['remember'])) {
+            $id = openssl_decrypt($_COOKIE['remember'], "aes-256-cbc", $this->key, 0, $this->iv);
             $userData = $this->user->getUserById($id);
             if ($userData) {
                 SessionManager::startSession($userData['user_id'], "{$userData['nombre']} {$userData['apellido']}", $userData['rol']);
@@ -178,7 +178,7 @@ class LogInController extends Controller
     public function changePassword(Request $request)
     {
         $this->gestor_errores->emptyInput('password', $request->input("password"));
-        $this->gestor_errores->emptyInput("passwordConfirm", $request->input("password"));
+        $this->gestor_errores->emptyInput("passwordConfirm", $request->input("passwordConfirm"));
         if ($this->gestor_errores->HayErrores()) {
             return view('setPassword', ['errores' => $this->gestor_errores->getErrores(), 'token' => $request->input("token")]);
         }

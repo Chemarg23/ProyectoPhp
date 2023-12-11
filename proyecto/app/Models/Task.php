@@ -36,7 +36,7 @@ class Task
      */
     public function getTask($id)
     {
-        $query = "SELECT t.*, u.nombre as name, u.apellido as surname 
+        $query = "SELECt t.*, u.nombre as name, u.apellido as surname 
                   FROM task t, usuarios u 
                   WHERE u.user_id = t.op_id AND task_id = $id";
         return $this->connection->customQuery($query)[0];
@@ -49,7 +49,7 @@ class Task
      */
     public function deleteTask($id)
     {
-        $sql = "DELETE FROM task WHERE task_id = $id";
+        $sql = "DELETe FROM task WHERE task_id = $id";
         $this->connection->exec($sql);
     }
 
@@ -73,7 +73,7 @@ class Task
     public function getTasks(?array $condition, $pag)
     {
         $pag = $pag * 15 - 15;
-        $sql = "SELECT t.*, u.nombre as op_name, u.apellido as op_ap  
+        $sql = "SELECt t.*, u.nombre as op_name, u.apellido as op_ap  
                 FROM task t, usuarios u 
                 WHERE u.user_id = t.op_id " . getWhere($condition, 'a') . " 
                 ORDER BY fecha_inicio DESC 
@@ -89,8 +89,8 @@ class Task
      */
     public function finishTask(array $params, $id)
     {
-        $sql = "UPDATE task
-                SET estado = :estado,
+        $sql = "UPDATe task
+                SEt estado = :estado,
                     img_url = CONCAT(img_url, '|', :img),
                     txt_url = CONCAT(txt_url, '|', :txt),
                     comentarios_post = :comentario_post
@@ -106,8 +106,8 @@ class Task
      */
     public function updateTask(array $params, $id)
     {
-        $sql = "UPDATE task
-                SET descripcion = :desc,
+        $sql = "UPDATe task
+                SEt descripcion = :desc,
                     nombre = :nombre,
                     apellido = :apellido,
                     telefono = :tel,
@@ -134,7 +134,7 @@ class Task
      */
     public function insertTask(array $params)
     {
-        $sql = "INSERT INTO task 
+        $sql = "INSERt INTO task 
                 VALUES (null, :desc, :nombre, :apellido, :tel, :mail, :dni, null, :fecha, 
                         :direccion, :poblacion, :codigo_postal, :provincia, :operador, 
                         :estado, :comentario, null, :txt, :img)";
@@ -148,7 +148,7 @@ class Task
      */
     public function maxId()
     {
-        return $this->connection->customQuery("SELECT MAX(task_id) as id FROM task")[0]['id'];
+        return $this->connection->customQuery("SELECt MAX(task_id) as id FROM task")[0]['id'];
     }
 
     // Métodos privados auxiliares
@@ -189,7 +189,7 @@ class Task
 
     private function updateTaskStatus($id, $status)
     {
-        $this->connection->exec("UPDATE task SET estado = '$status' WHERE task_id = $id");
+        $this->connection->exec("UPDATe task SEt estado = '$status' WHERE task_id = $id");
     }
 
     private function setDefaults($params, $keys)

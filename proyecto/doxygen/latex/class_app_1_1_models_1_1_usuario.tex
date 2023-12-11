@@ -1,0 +1,224 @@
+\doxysection{Usuario Class Reference}
+\hypertarget{class_app_1_1_models_1_1_usuario}{}\label{class_app_1_1_models_1_1_usuario}\index{Usuario@{Usuario}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_acaf79203fdfa8ca522b7d9769286d993}{get\+User\+By\+Mail}} (\$mail)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_a5e7d616b80a7b0fb4b8d2736800e29cc}{get\+User\+By\+Id}} (\$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_a1139127b388dd417b82a85b208598b08}{get\+All\+Users}} (\$pag)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_ab537ac3ba9aa827fb55494c8cbc9f7d4}{user\+Exist}} (\$mail)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_afcf11a6cced1b0b0de757511f78151a5}{set\+Remember\+Token}} (\$mail, \$token, \$expire\+Date)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_a7b9215e23d7248c1a872a81ea567d973}{check\+Token}} (\$token)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_ab2ab0afa4d76a6f79fff46232735079e}{update\+Password}} (\$password, \$token)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_a2f8258add505482d7f00ea26493a5723}{delete}} (\$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_ae59062524c4e12b686440881d9ef6636}{add\+User}} (\$params)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_a1e823b4c0450e8f1c3502afba92d7de3}{update\+Profile}} (\$params, \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_a7455765c03746e37adc7cc402a210114}{check\+Credentials}} (\$request, \&\$gestor\+\_\+errores)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class Usuario
+
+Representa un modelo de usuario con métodos para gestionar usuarios en la base de datos. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_app_1_1_models_1_1_usuario_a095c5d389db211932136b53f25f39685}\label{class_app_1_1_models_1_1_usuario_a095c5d389db211932136b53f25f39685} 
+\index{Usuario@{Usuario}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor de la clase Usuario.
+
+Inicializa la conexión a la base de datos. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_models_1_1_usuario_ae59062524c4e12b686440881d9ef6636}\label{class_app_1_1_models_1_1_usuario_ae59062524c4e12b686440881d9ef6636} 
+\index{Usuario@{Usuario}!addUser@{addUser}}
+\index{addUser@{addUser}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily add\+User (\begin{DoxyParamCaption}\item[{}]{\$params }\end{DoxyParamCaption})}
+
+Agrega un nuevo usuario a la base de datos.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$params} & Los datos del nuevo usuario. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_app_1_1_models_1_1_usuario_a7455765c03746e37adc7cc402a210114}\label{class_app_1_1_models_1_1_usuario_a7455765c03746e37adc7cc402a210114} 
+\index{Usuario@{Usuario}!checkCredentials@{checkCredentials}}
+\index{checkCredentials@{checkCredentials}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{checkCredentials()}{checkCredentials()}}
+{\footnotesize\ttfamily check\+Credentials (\begin{DoxyParamCaption}\item[{}]{\$request,  }\item[{\&}]{\$gestor\+\_\+errores }\end{DoxyParamCaption})}
+
+Verifica las credenciales de inicio de sesión de un usuario.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request & {\em \$request} & La solicitud HTTP con las credenciales del usuario. \\
+\hline
+\doxylink{class_gestor_errores}{Gestor\+Errores} & {\em \$gestor\+\_\+errores} & Objeto para gestionar errores. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True si las credenciales son válidas, False si no. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_models_1_1_usuario_a7b9215e23d7248c1a872a81ea567d973}\label{class_app_1_1_models_1_1_usuario_a7b9215e23d7248c1a872a81ea567d973} 
+\index{Usuario@{Usuario}!checkToken@{checkToken}}
+\index{checkToken@{checkToken}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{checkToken()}{checkToken()}}
+{\footnotesize\ttfamily check\+Token (\begin{DoxyParamCaption}\item[{}]{\$token }\end{DoxyParamCaption})}
+
+Verifica un token de recuerdo y devuelve los datos del usuario si el token es válido.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$token} & El token de recuerdo a verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array\texorpdfstring{$\vert$}{|}false Los datos del usuario si el token es válido, o false si no es válido. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_models_1_1_usuario_a2f8258add505482d7f00ea26493a5723}\label{class_app_1_1_models_1_1_usuario_a2f8258add505482d7f00ea26493a5723} 
+\index{Usuario@{Usuario}!delete@{delete}}
+\index{delete@{delete}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Elimina un usuario por su identificador único.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & El identificador único del usuario a eliminar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_app_1_1_models_1_1_usuario_a1139127b388dd417b82a85b208598b08}\label{class_app_1_1_models_1_1_usuario_a1139127b388dd417b82a85b208598b08} 
+\index{Usuario@{Usuario}!getAllUsers@{getAllUsers}}
+\index{getAllUsers@{getAllUsers}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getAllUsers()}{getAllUsers()}}
+{\footnotesize\ttfamily get\+All\+Users (\begin{DoxyParamCaption}\item[{}]{\$pag }\end{DoxyParamCaption})}
+
+Obtiene una lista paginada de usuarios.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$pag} & La página de resultados a obtener. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array La lista de usuarios en la página especificada. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_models_1_1_usuario_a5e7d616b80a7b0fb4b8d2736800e29cc}\label{class_app_1_1_models_1_1_usuario_a5e7d616b80a7b0fb4b8d2736800e29cc} 
+\index{Usuario@{Usuario}!getUserById@{getUserById}}
+\index{getUserById@{getUserById}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getUserById()}{getUserById()}}
+{\footnotesize\ttfamily get\+User\+By\+Id (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Obtiene un usuario por su identificador único.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & El identificador único del usuario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array\texorpdfstring{$\vert$}{|}false Los datos del usuario si existe, o false si no existe. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_models_1_1_usuario_acaf79203fdfa8ca522b7d9769286d993}\label{class_app_1_1_models_1_1_usuario_acaf79203fdfa8ca522b7d9769286d993} 
+\index{Usuario@{Usuario}!getUserByMail@{getUserByMail}}
+\index{getUserByMail@{getUserByMail}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getUserByMail()}{getUserByMail()}}
+{\footnotesize\ttfamily get\+User\+By\+Mail (\begin{DoxyParamCaption}\item[{}]{\$mail }\end{DoxyParamCaption})}
+
+Obtiene un usuario por su dirección de correo electrónico.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$mail} & La dirección de correo electrónico del usuario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array\texorpdfstring{$\vert$}{|}false Los datos del usuario si existe, o false si no existe. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_models_1_1_usuario_afcf11a6cced1b0b0de757511f78151a5}\label{class_app_1_1_models_1_1_usuario_afcf11a6cced1b0b0de757511f78151a5} 
+\index{Usuario@{Usuario}!setRememberToken@{setRememberToken}}
+\index{setRememberToken@{setRememberToken}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setRememberToken()}{setRememberToken()}}
+{\footnotesize\ttfamily set\+Remember\+Token (\begin{DoxyParamCaption}\item[{}]{\$mail,  }\item[{}]{\$token,  }\item[{}]{\$expire\+Date }\end{DoxyParamCaption})}
+
+Establece el token de recuerdo y la fecha de vencimiento para un usuario.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$mail} & La dirección de correo electrónico del usuario. \\
+\hline
+string & {\em \$token} & El token de recuerdo. \\
+\hline
+string & {\em \$expire\+Date} & La fecha de vencimiento del token. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_app_1_1_models_1_1_usuario_ab2ab0afa4d76a6f79fff46232735079e}\label{class_app_1_1_models_1_1_usuario_ab2ab0afa4d76a6f79fff46232735079e} 
+\index{Usuario@{Usuario}!updatePassword@{updatePassword}}
+\index{updatePassword@{updatePassword}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{updatePassword()}{updatePassword()}}
+{\footnotesize\ttfamily update\+Password (\begin{DoxyParamCaption}\item[{}]{\$password,  }\item[{}]{\$token }\end{DoxyParamCaption})}
+
+Actualiza la contraseña de un usuario después de restablecerla.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$password} & La nueva contraseña del usuario. \\
+\hline
+string & {\em \$token} & El token de recuerdo asociado al restablecimiento de contraseña. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_app_1_1_models_1_1_usuario_a1e823b4c0450e8f1c3502afba92d7de3}\label{class_app_1_1_models_1_1_usuario_a1e823b4c0450e8f1c3502afba92d7de3} 
+\index{Usuario@{Usuario}!updateProfile@{updateProfile}}
+\index{updateProfile@{updateProfile}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{updateProfile()}{updateProfile()}}
+{\footnotesize\ttfamily update\+Profile (\begin{DoxyParamCaption}\item[{}]{\$params,  }\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Actualiza el perfil de un usuario.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$params} & Los nuevos datos del usuario. \\
+\hline
+int & {\em \$id} & El identificador único del usuario. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_app_1_1_models_1_1_usuario_ab537ac3ba9aa827fb55494c8cbc9f7d4}\label{class_app_1_1_models_1_1_usuario_ab537ac3ba9aa827fb55494c8cbc9f7d4} 
+\index{Usuario@{Usuario}!userExist@{userExist}}
+\index{userExist@{userExist}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{userExist()}{userExist()}}
+{\footnotesize\ttfamily user\+Exist (\begin{DoxyParamCaption}\item[{}]{\$mail }\end{DoxyParamCaption})}
+
+Verifica si un usuario con la dirección de correo electrónico proporcionada ya existe.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$mail} & La dirección de correo electrónico a verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True si el usuario existe, False si no. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp2/htdocs/proyecto/app/\+Models/Usuario.\+php\end{DoxyCompactItemize}

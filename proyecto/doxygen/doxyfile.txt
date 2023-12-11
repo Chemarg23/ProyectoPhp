@@ -16,17 +16,13 @@ INPUT                  = app/ config/ public/ resources/ routes/ tests/
 # Exclude some files and directories from documentation
 EXCLUDE                = node_modules
 
-# If you're using PHP, set the following:
+
 OPTIMIZE_FOR_FORTRAN   = YES
 
-# PHP configuration
 EXTENSION_MAPPING      = php=PHP
 
-# Set the following to YES to generate HTML output
 GENERATE_HTML          = YES
 
-# The HTML output directory
 HTML_OUTPUT            = html
 
-# Set the following to YES to generate LaTeX output
 GENERATE_LATEX         = NO

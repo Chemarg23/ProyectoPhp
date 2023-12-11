@@ -1,0 +1,154 @@
+\doxysection{Log\+In\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_log_in_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_log_in_controller}\index{LogInController@{LogInController}}
+Inheritance diagram for Log\+In\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_log_in_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a6f76322f0c7e0662b52141b10d4b07b8}{show\+Log\+In}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_ae94f3951bd612512abf7add57fd7ea0a}{check\+Credentials}} (Request \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_ac875b967576b38bc57db9911ce8e55cc}{show\+Forgotten\+Form}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a4c0477f070955904c584121435529093}{send\+Mail}} (Request \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a3ff5e40d175de51c7e97c9a02fa45043}{show\+Change\+Form}} (Request \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_aff122737aa8666679226002c3f6589d0}{change\+Password}} (Request \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a9dbc3f3370308b59b039afc9a48381b3}{log\+Out}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a6f5a316077e9179bcf9fd2016b849dd8}\label{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a6f5a316077e9179bcf9fd2016b849dd8} 
+{\bfseries \$gestor\+\_\+errores}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controlador para manejar la autenticación y la gestión de sesiones. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a095c5d389db211932136b53f25f39685}\label{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a095c5d389db211932136b53f25f39685} 
+\index{LogInController@{LogInController}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LogInController@{LogInController}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor de la clase Log\+In\+Controller. Inicializa instancias del gestor de errores y del modelo de usuario. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_aff122737aa8666679226002c3f6589d0}\label{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_aff122737aa8666679226002c3f6589d0} 
+\index{LogInController@{LogInController}!changePassword@{changePassword}}
+\index{changePassword@{changePassword}!LogInController@{LogInController}}
+\doxysubsubsection{\texorpdfstring{changePassword()}{changePassword()}}
+{\footnotesize\ttfamily change\+Password (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})}
+
+Cambia la contraseña del usuario.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & Objeto de solicitud. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View Vista de éxito o fracaso del cambio de contraseña. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_ae94f3951bd612512abf7add57fd7ea0a}\label{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_ae94f3951bd612512abf7add57fd7ea0a} 
+\index{LogInController@{LogInController}!checkCredentials@{checkCredentials}}
+\index{checkCredentials@{checkCredentials}!LogInController@{LogInController}}
+\doxysubsubsection{\texorpdfstring{checkCredentials()}{checkCredentials()}}
+{\footnotesize\ttfamily check\+Credentials (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})}
+
+Verifica las credenciales proporcionadas durante el inicio de sesión.
+
+Valida las entradas del formulario y verifica las credenciales del usuario. Si es exitoso, inicia una sesión y, opcionalmente, establece una cookie \textquotesingle{}remember\textquotesingle{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & Objeto de solicitud. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View\texorpdfstring{$\vert$}{|}\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Redirect\+Response Vista de inicio de sesión o redirección a /taskbox. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a9dbc3f3370308b59b039afc9a48381b3}\label{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a9dbc3f3370308b59b039afc9a48381b3} 
+\index{LogInController@{LogInController}!logOut@{logOut}}
+\index{logOut@{logOut}!LogInController@{LogInController}}
+\doxysubsubsection{\texorpdfstring{logOut()}{logOut()}}
+{\footnotesize\ttfamily log\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cierra la sesión del usuario.
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Redirect\+Response Redirección a la página de inicio. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a4c0477f070955904c584121435529093}\label{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a4c0477f070955904c584121435529093} 
+\index{LogInController@{LogInController}!sendMail@{sendMail}}
+\index{sendMail@{sendMail}!LogInController@{LogInController}}
+\doxysubsubsection{\texorpdfstring{sendMail()}{sendMail()}}
+{\footnotesize\ttfamily send\+Mail (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})}
+
+Envia un correo electrónico con un enlace para restablecer la contraseña.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & Objeto de solicitud. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View Vista de éxito o fracaso del envío del correo electrónico. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a3ff5e40d175de51c7e97c9a02fa45043}\label{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a3ff5e40d175de51c7e97c9a02fa45043} 
+\index{LogInController@{LogInController}!showChangeForm@{showChangeForm}}
+\index{showChangeForm@{showChangeForm}!LogInController@{LogInController}}
+\doxysubsubsection{\texorpdfstring{showChangeForm()}{showChangeForm()}}
+{\footnotesize\ttfamily show\+Change\+Form (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})}
+
+Muestra el formulario para cambiar la contraseña con un token.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & Objeto de solicitud. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View Vista del formulario de cambio de contraseña. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_ac875b967576b38bc57db9911ce8e55cc}\label{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_ac875b967576b38bc57db9911ce8e55cc} 
+\index{LogInController@{LogInController}!showForgottenForm@{showForgottenForm}}
+\index{showForgottenForm@{showForgottenForm}!LogInController@{LogInController}}
+\doxysubsubsection{\texorpdfstring{showForgottenForm()}{showForgottenForm()}}
+{\footnotesize\ttfamily show\+Forgotten\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Muestra el formulario para restablecer la contraseña olvidada.
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View Vista del formulario de restablecimiento de contraseña. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a6f76322f0c7e0662b52141b10d4b07b8}\label{class_app_1_1_http_1_1_controllers_1_1_log_in_controller_a6f76322f0c7e0662b52141b10d4b07b8} 
+\index{LogInController@{LogInController}!showLogIn@{showLogIn}}
+\index{showLogIn@{showLogIn}!LogInController@{LogInController}}
+\doxysubsubsection{\texorpdfstring{showLogIn()}{showLogIn()}}
+{\footnotesize\ttfamily show\+Log\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Muestra la página de inicio de sesión.
+
+Si existe una cookie \textquotesingle{}remember\textquotesingle{}, intenta desencriptarla y inicia una sesión si es válida.
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View\texorpdfstring{$\vert$}{|}\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Redirect\+Response Vista de inicio de sesión o redirección a /taskbox. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp2/htdocs/proyecto/app/\+Http/\+Controllers/Log\+In\+Controller.\+php\end{DoxyCompactItemize}

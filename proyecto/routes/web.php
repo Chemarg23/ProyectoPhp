@@ -36,7 +36,7 @@ Route::post('/taskbox/finishing/{id}',[TaskController::class, 'finishTask']) -> 
 Route::get('/taskbox/addTask', [TaskController::class,"showAddForm"]) -> name("addTask"); 
 Route::post('/taskbox/adding', [TaskController::class,"addTask"]) -> name("validate"); 
 
-Route::get('/taskbox/finishTask/{id}', [TaskController::class, 'showTask'])->name('show');
+Route::get('/taskbox/watchTask/{id}', [TaskController::class, 'showTask'])->name('show');
 
 
 Route::get('/taskbox/update/{id}',[TaskController::class,"showUpdateForm"])->name('updateForm');

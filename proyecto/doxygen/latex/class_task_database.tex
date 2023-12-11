@@ -1,0 +1,108 @@
+\doxysection{Task\+Database Class Reference}
+\hypertarget{class_task_database}{}\label{class_task_database}\index{TaskDatabase@{TaskDatabase}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_task_database_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_task_database_ab8d0e5f9c244007ded0faf3aa206e1ed}{custom\+Query}} (\$sql)
+\item 
+\mbox{\hyperlink{class_task_database_a42a58c257fede7447ec69e02a70f9e36}{num\+Rows}} (\$sql)
+\item 
+\mbox{\hyperlink{class_task_database_aa66dd9b75483d3d4cf93b6f8788bbd90}{exec}} (\$sql)
+\item 
+\mbox{\hyperlink{class_task_database_a5015a0bdba130fdd263b136b5304eafa}{prep}} (\$sql, \$params)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_task_database_ac93fbec81f07e5d15f80db907e63dc10}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase \doxylink{class_task_database}{Task\+Database} para interactuar con la base de datos de tareas. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_task_database_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_task_database_aa69c8bf1f1dcf4e72552efff1fe3e87e} 
+\index{TaskDatabase@{TaskDatabase}!close@{close}}
+\index{close@{close}!TaskDatabase@{TaskDatabase}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cerrar la conexión y resetear la instancia. \Hypertarget{class_task_database_ab8d0e5f9c244007ded0faf3aa206e1ed}\label{class_task_database_ab8d0e5f9c244007ded0faf3aa206e1ed} 
+\index{TaskDatabase@{TaskDatabase}!customQuery@{customQuery}}
+\index{customQuery@{customQuery}!TaskDatabase@{TaskDatabase}}
+\doxysubsubsection{\texorpdfstring{customQuery()}{customQuery()}}
+{\footnotesize\ttfamily custom\+Query (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})}
+
+Ejecutar una consulta personalizada y obtener los resultados.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & Consulta SQL. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array Resultados de la consulta. 
+\end{DoxyReturn}
+\Hypertarget{class_task_database_aa66dd9b75483d3d4cf93b6f8788bbd90}\label{class_task_database_aa66dd9b75483d3d4cf93b6f8788bbd90} 
+\index{TaskDatabase@{TaskDatabase}!exec@{exec}}
+\index{exec@{exec}!TaskDatabase@{TaskDatabase}}
+\doxysubsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily exec (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})}
+
+Ejecutar una consulta que no devuelve resultados (INSERT, UPDATE, DELETE, etc.).
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & Consulta SQL. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_task_database_ac93fbec81f07e5d15f80db907e63dc10}\label{class_task_database_ac93fbec81f07e5d15f80db907e63dc10} 
+\index{TaskDatabase@{TaskDatabase}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!TaskDatabase@{TaskDatabase}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Obtener la instancia única de la clase \doxylink{class_task_database}{Task\+Database}.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_task_database}{Task\+Database} Instancia única de la clase. 
+\end{DoxyReturn}
+\Hypertarget{class_task_database_a42a58c257fede7447ec69e02a70f9e36}\label{class_task_database_a42a58c257fede7447ec69e02a70f9e36} 
+\index{TaskDatabase@{TaskDatabase}!numRows@{numRows}}
+\index{numRows@{numRows}!TaskDatabase@{TaskDatabase}}
+\doxysubsubsection{\texorpdfstring{numRows()}{numRows()}}
+{\footnotesize\ttfamily num\+Rows (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})}
+
+Obtener el número de filas afectadas por una consulta.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & Consulta SQL. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Número de filas afectadas. 
+\end{DoxyReturn}
+\Hypertarget{class_task_database_a5015a0bdba130fdd263b136b5304eafa}\label{class_task_database_a5015a0bdba130fdd263b136b5304eafa} 
+\index{TaskDatabase@{TaskDatabase}!prep@{prep}}
+\index{prep@{prep}!TaskDatabase@{TaskDatabase}}
+\doxysubsubsection{\texorpdfstring{prep()}{prep()}}
+{\footnotesize\ttfamily prep (\begin{DoxyParamCaption}\item[{}]{\$sql,  }\item[{}]{\$params }\end{DoxyParamCaption})}
+
+Preparar y ejecutar una consulta preparada con parámetros.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & Consulta SQL preparada. \\
+\hline
+array & {\em \$params} & Parámetros para la consulta. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp2/htdocs/proyecto/app/\+Models/db.\+php\end{DoxyCompactItemize}

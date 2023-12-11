@@ -1,0 +1,95 @@
+\doxysection{Session\+Manager Class Reference}
+\hypertarget{class_app_1_1_models_1_1_session_manager}{}\label{class_app_1_1_models_1_1_session_manager}\index{SessionManager@{SessionManager}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_app_1_1_models_1_1_session_manager_a251898c906e5f3eca4565fd151ebc6b9}{start\+Session}} (\$user\+Id, \$username, \$rol)
+\item 
+static \mbox{\hyperlink{class_app_1_1_models_1_1_session_manager_a6b8d7f313ad7b7c26affac7a74547d50}{is\+Logged\+In}} ()
+\item 
+static \mbox{\hyperlink{class_app_1_1_models_1_1_session_manager_a9902ea1bf23e60c6ca1482e9dcd2185b}{is\+Admin}} ()
+\item 
+static \mbox{\hyperlink{class_app_1_1_models_1_1_session_manager_a2d109094b0c7bf0743f2459b59ce9b12}{get\+Username}} ()
+\item 
+static \mbox{\hyperlink{class_app_1_1_models_1_1_session_manager_a30ff2bb5ea7777718f78c771cfbfe76e}{get\+User\+Id}} ()
+\item 
+static \mbox{\hyperlink{class_app_1_1_models_1_1_session_manager_a132f894dfa67a166e1b7766fce4d4636}{end\+Session}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase Session\+Manager para gestionar sesiones de usuario. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_models_1_1_session_manager_a132f894dfa67a166e1b7766fce4d4636}\label{class_app_1_1_models_1_1_session_manager_a132f894dfa67a166e1b7766fce4d4636} 
+\index{SessionManager@{SessionManager}!endSession@{endSession}}
+\index{endSession@{endSession}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{endSession()}{endSession()}}
+{\footnotesize\ttfamily static end\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Finalizar la sesión actual del usuario. \Hypertarget{class_app_1_1_models_1_1_session_manager_a30ff2bb5ea7777718f78c771cfbfe76e}\label{class_app_1_1_models_1_1_session_manager_a30ff2bb5ea7777718f78c771cfbfe76e} 
+\index{SessionManager@{SessionManager}!getUserId@{getUserId}}
+\index{getUserId@{getUserId}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{getUserId()}{getUserId()}}
+{\footnotesize\ttfamily static get\+User\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Obtener el ID del usuario actualmente autenticado.
+
+\begin{DoxyReturn}{Returns}
+int\texorpdfstring{$\vert$}{|}null ID de usuario o null si no hay sesión. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_models_1_1_session_manager_a2d109094b0c7bf0743f2459b59ce9b12}\label{class_app_1_1_models_1_1_session_manager_a2d109094b0c7bf0743f2459b59ce9b12} 
+\index{SessionManager@{SessionManager}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily static get\+Username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Obtener el nombre de usuario actualmente autenticado.
+
+\begin{DoxyReturn}{Returns}
+string\texorpdfstring{$\vert$}{|}null Nombre de usuario o null si no hay sesión. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_models_1_1_session_manager_a9902ea1bf23e60c6ca1482e9dcd2185b}\label{class_app_1_1_models_1_1_session_manager_a9902ea1bf23e60c6ca1482e9dcd2185b} 
+\index{SessionManager@{SessionManager}!isAdmin@{isAdmin}}
+\index{isAdmin@{isAdmin}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{isAdmin()}{isAdmin()}}
+{\footnotesize\ttfamily static is\+Admin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Verificar si el usuario tiene privilegios de administrador.
+
+\begin{DoxyReturn}{Returns}
+bool True si el usuario es administrador, false de lo contrario. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_models_1_1_session_manager_a6b8d7f313ad7b7c26affac7a74547d50}\label{class_app_1_1_models_1_1_session_manager_a6b8d7f313ad7b7c26affac7a74547d50} 
+\index{SessionManager@{SessionManager}!isLoggedIn@{isLoggedIn}}
+\index{isLoggedIn@{isLoggedIn}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{isLoggedIn()}{isLoggedIn()}}
+{\footnotesize\ttfamily static is\+Logged\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Verificar si el usuario está actualmente autenticado.
+
+\begin{DoxyReturn}{Returns}
+bool True si el usuario está autenticado, false de lo contrario. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_models_1_1_session_manager_a251898c906e5f3eca4565fd151ebc6b9}\label{class_app_1_1_models_1_1_session_manager_a251898c906e5f3eca4565fd151ebc6b9} 
+\index{SessionManager@{SessionManager}!startSession@{startSession}}
+\index{startSession@{startSession}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{startSession()}{startSession()}}
+{\footnotesize\ttfamily static start\+Session (\begin{DoxyParamCaption}\item[{}]{\$user\+Id,  }\item[{}]{\$username,  }\item[{}]{\$rol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Iniciar una sesión con la información del usuario.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$user\+Id} & ID del usuario. \\
+\hline
+string & {\em \$username} & Nombre de usuario. \\
+\hline
+int & {\em \$rol} & Rol del usuario. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp2/htdocs/proyecto/app/\+Models/Session\+Manager.\+php\end{DoxyCompactItemize}

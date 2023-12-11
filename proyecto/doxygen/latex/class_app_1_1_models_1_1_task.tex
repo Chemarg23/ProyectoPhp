@@ -1,0 +1,157 @@
+\doxysection{Task Class Reference}
+\hypertarget{class_app_1_1_models_1_1_task}{}\label{class_app_1_1_models_1_1_task}\index{Task@{Task}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_task_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_task_aaf07838652daa15674af305b126ee813}{get\+Task}} (\$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_task_a6e85bd90a23846a20ee2d827cfdf28be}{delete\+Task}} (\$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_task_aaf4b91e4f46afc37f28ad94a3d81b078}{accept\+Task}} (\$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_task_a303ede6897070d466bdc275f71ca809c}{get\+Tasks}} (?array \$condition, \$pag)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_task_a1179f61a0486b6cce67037c0f28b8f20}{finish\+Task}} (array \$params, \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_task_a20c35276b366c673a77cf7a36529bb7e}{update\+Task}} (array \$params, \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_task_ae31841f50ff2bbe1f03cfbdc019dbd87}{insert\+Task}} (array \$params)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_task_af195200d9e533ded91c2bc4438981533}{max\+Id}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase Task para gestionar tareas. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_app_1_1_models_1_1_task_a095c5d389db211932136b53f25f39685}\label{class_app_1_1_models_1_1_task_a095c5d389db211932136b53f25f39685} 
+\index{Task@{Task}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor de la clase Task. Inicializa la conexión a la base de datos. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_models_1_1_task_aaf4b91e4f46afc37f28ad94a3d81b078}\label{class_app_1_1_models_1_1_task_aaf4b91e4f46afc37f28ad94a3d81b078} 
+\index{Task@{Task}!acceptTask@{acceptTask}}
+\index{acceptTask@{acceptTask}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{acceptTask()}{acceptTask()}}
+{\footnotesize\ttfamily accept\+Task (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Marca una tarea como aceptada.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & Identificador de la tarea a marcar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_app_1_1_models_1_1_task_a6e85bd90a23846a20ee2d827cfdf28be}\label{class_app_1_1_models_1_1_task_a6e85bd90a23846a20ee2d827cfdf28be} 
+\index{Task@{Task}!deleteTask@{deleteTask}}
+\index{deleteTask@{deleteTask}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{deleteTask()}{deleteTask()}}
+{\footnotesize\ttfamily delete\+Task (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Elimina una tarea específica.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & Identificador de la tarea a eliminar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_app_1_1_models_1_1_task_a1179f61a0486b6cce67037c0f28b8f20}\label{class_app_1_1_models_1_1_task_a1179f61a0486b6cce67037c0f28b8f20} 
+\index{Task@{Task}!finishTask@{finishTask}}
+\index{finishTask@{finishTask}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{finishTask()}{finishTask()}}
+{\footnotesize\ttfamily finish\+Task (\begin{DoxyParamCaption}\item[{array}]{\$params,  }\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Finaliza una tarea específica.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$params} & Parámetros para la finalización de la tarea. \\
+\hline
+int & {\em \$id} & Identificador de la tarea a finalizar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_app_1_1_models_1_1_task_aaf07838652daa15674af305b126ee813}\label{class_app_1_1_models_1_1_task_aaf07838652daa15674af305b126ee813} 
+\index{Task@{Task}!getTask@{getTask}}
+\index{getTask@{getTask}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getTask()}{getTask()}}
+{\footnotesize\ttfamily get\+Task (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Obtiene los detalles de una tarea específica.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & Identificador de la tarea. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array Detalles de la tarea. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_models_1_1_task_a303ede6897070d466bdc275f71ca809c}\label{class_app_1_1_models_1_1_task_a303ede6897070d466bdc275f71ca809c} 
+\index{Task@{Task}!getTasks@{getTasks}}
+\index{getTasks@{getTasks}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getTasks()}{getTasks()}}
+{\footnotesize\ttfamily get\+Tasks (\begin{DoxyParamCaption}\item[{?array}]{\$condition,  }\item[{}]{\$pag }\end{DoxyParamCaption})}
+
+Obtiene un conjunto de tareas que cumplen con ciertas condiciones y paginación.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$condition} & Condiciones de filtrado (puede ser null). \\
+\hline
+int & {\em \$pag} & Número de página para la paginación. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array Lista de tareas. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_models_1_1_task_ae31841f50ff2bbe1f03cfbdc019dbd87}\label{class_app_1_1_models_1_1_task_ae31841f50ff2bbe1f03cfbdc019dbd87} 
+\index{Task@{Task}!insertTask@{insertTask}}
+\index{insertTask@{insertTask}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{insertTask()}{insertTask()}}
+{\footnotesize\ttfamily insert\+Task (\begin{DoxyParamCaption}\item[{array}]{\$params }\end{DoxyParamCaption})}
+
+Inserta una nueva tarea en la base de datos.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$params} & Parámetros para la nueva tarea. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_app_1_1_models_1_1_task_af195200d9e533ded91c2bc4438981533}\label{class_app_1_1_models_1_1_task_af195200d9e533ded91c2bc4438981533} 
+\index{Task@{Task}!maxId@{maxId}}
+\index{maxId@{maxId}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{maxId()}{maxId()}}
+{\footnotesize\ttfamily max\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Obtiene el ID máximo de las tareas.
+
+\begin{DoxyReturn}{Returns}
+int ID máximo de las tareas. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_models_1_1_task_a20c35276b366c673a77cf7a36529bb7e}\label{class_app_1_1_models_1_1_task_a20c35276b366c673a77cf7a36529bb7e} 
+\index{Task@{Task}!updateTask@{updateTask}}
+\index{updateTask@{updateTask}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{updateTask()}{updateTask()}}
+{\footnotesize\ttfamily update\+Task (\begin{DoxyParamCaption}\item[{array}]{\$params,  }\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Actualiza los detalles de una tarea específica.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$params} & Parámetros para la actualización de la tarea. \\
+\hline
+int & {\em \$id} & Identificador de la tarea a actualizar. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp2/htdocs/proyecto/app/\+Models/Task.\+php\end{DoxyCompactItemize}
